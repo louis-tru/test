@@ -9,8 +9,6 @@ interface ReactNodeArray extends Array<ReactNode> {}
 type ReactFragment = {} | ReactNodeArray;
 type ReactNode = ReactChild | ReactFragment | boolean | null | undefined;
 
-type ComponentState = any;
-
 export class ViewController<P = {}, S = {}> {
 
 	protected readonly props: Readonly<P>;
