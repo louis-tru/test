@@ -9,14 +9,12 @@ interface ReactNodeArray extends Array<ReactNode> {}
 type ReactFragment = {} | ReactNodeArray;
 type ReactNode = ReactChild | ReactFragment | boolean | null | undefined;
 
-export class ViewController<P = {}, S = {}> {
+export class ViewController<P = {}> {
 
 	protected readonly props: Readonly<P>;
-	protected readonly state: Readonly<S>;
 
 	constructor(props: Readonly<P>) {
 		this.props = props;
-		this.state = {} as S;
 	}
 
 }
@@ -30,3 +28,7 @@ export function jsxFactory<P extends {}, T extends ViewController<P>>(
 ) {
 	return {};
 }
+
+// export function jsxFactory() {
+// 	return {} as any;
+// }
