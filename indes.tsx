@@ -3,7 +3,7 @@ import * as JSX from './jsx';
 
 class Test extends JSX.ViewController<{a: number; b: string}> {
 
-	state = this.props;
+	private _state = this.props;
 
 	test() {
 
@@ -11,16 +11,16 @@ class Test extends JSX.ViewController<{a: number; b: string}> {
 
 		console.log(test);
 
-		console.log(this.props);
+		console.log(this._state);
 	}
 }
 
 class Test2 extends JSX.ViewController<{c: number}> {
 
-	_state_c = this.props.c;
+	private _c = this.props.c;
 
 	test() {
-		console.log(this.props.c);
+		console.log(this.props.c, this._c);
 	}
 
 }
