@@ -2,6 +2,8 @@
 	"compileOnSave": true,
 	"compilerOptions": {
 		"module": "esnext",
+		// "module": "commonjs",
+		// "module": "amd",
 		"target": "ES2018",
 		"moduleResolution": "node",
 		"sourceMap": false,
