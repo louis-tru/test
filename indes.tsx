@@ -1,7 +1,7 @@
 
-import * as JSX from './jsx';
+import * as React from './jsx';
 
-class Test extends JSX.ViewController<{a: number; b: string}> {
+class Test extends React.ViewController<{a: number; b: string}> {
 	private _state = this.props;
 	test() {
 		var test = import('./test');
@@ -10,7 +10,7 @@ class Test extends JSX.ViewController<{a: number; b: string}> {
 	}
 }
 
-class Test2 extends JSX.ViewController<{c: number}> {
+class Test2 extends React.ViewController<{c: number}> {
 	private _c = this.props.c;
 	test() {
 		console.log(this.props.c, this._c);

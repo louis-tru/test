@@ -21,14 +21,10 @@ export class ViewController<P = {}> {
 
 type ClassType<P, T extends ViewController<P>> = (new (props: P) => T);
 
-export function jsxFactory<P extends {}, T extends ViewController<P>>(
+export function createElement<P extends {}, T extends ViewController<P>>(
 	type: ClassType<P, T>,
 	props: P,
 	...children: ReactNode[]
 ) {
 	return {};
 }
-
-// export function jsxFactory() {
-// 	return {} as any;
-// }

@@ -21,7 +21,7 @@
 		"experimentalDecorators": true,
 		"removeComments": true,
 		"jsx": "react",
-		"jsxFactory": "JSX.jsxFactory",
+		"jsxFactory": "React.createElement",
 	},
 	"include": [
 		"**/*",
