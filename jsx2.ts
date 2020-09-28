@@ -9,11 +9,11 @@ interface ReactNodeArray extends Array<ReactNode> {}
 type ReactFragment = {} | ReactNodeArray;
 type ReactNode = ReactChild | ReactFragment | boolean | null | undefined;
 
-export class ViewController {
+export class ViewController<T> {
 	// protected readonly props: Readonly<P> = {} as P;
-	// constructor(props: Readonly<P>) {
+	constructor(props: Partial<T>) {
 		// this.props = props;
-	// }
+	}
 }
 
 type Key = string | number;
@@ -44,8 +44,8 @@ interface ViewControllerConstructor<T> {
 	new(): T;
 }
 
-export function createElement<T extends ViewController>(
-	type: ViewControllerConstructor<T>,
+export function createElement<T>(
+	type: ViewControllerConstructor<ViewController<T>>,
 	props?: Partial<T> | null,
 	...children: ReactNode[]
 ) {
@@ -77,6 +77,7 @@ declare global {
 
 		interface IntrinsicClassAttributes<T> {
 			// [P in keyof T]: T[P];
+			a: number;
 		}
 
 		// type IntrinsicClassAttributes<T extends ViewController> = {
