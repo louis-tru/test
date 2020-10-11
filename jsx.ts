@@ -27,12 +27,8 @@ export function createElement<P extends {}, T extends ViewController<P>>(
 	...children: ReactNode[]
 ) {
 	return {};
-<<<<<<< HEAD
 }
 
 // export function jsxFactory() {
 // 	return {} as any;
 // }
-=======
-}
->>>>>>> fdb43f0d2cdc36fb30c4d327674322d4b09fcbab

@@ -2,11 +2,7 @@
 import * as React from './jsx';
 
 class Test extends React.ViewController<{a: number; b: string}> {
-<<<<<<< HEAD
 	// private _state = this.props;
-=======
-	private _state = this.props;
->>>>>>> fdb43f0d2cdc36fb30c4d327674322d4b09fcbab
 	test() {
 		var test = import('./test');
 		console.log(test);

@@ -1,25 +1,4 @@
 
-<<<<<<< HEAD
-export class ViewController {
-	constructor(props: any) {
-		
-	}
-}
-
-// type ClassType<T extends ViewController> = (new () => T);
-
-interface ViewControllerConstructor<T extends ViewController> {
-	new(props: Partial<T>): T;
-}
-
-export function createElement<T extends ViewController>(
-	type: ViewControllerConstructor<T>,
-	props: Partial<T>,
-	...children: any[]
-) {
-	return {};
-}
-=======
 interface ReactElement {
 }
 
@@ -108,4 +87,3 @@ declare global {
 		// type IntrinsicClassAttributes<T> = Props<T>;
 	}
 }
->>>>>>> fdb43f0d2cdc36fb30c4d327674322d4b09fcbab
